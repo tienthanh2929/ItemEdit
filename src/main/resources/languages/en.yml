@@ -121,6 +121,10 @@ itemedit:
       - ''
       - '&b&lTip: &bPlace and break the skull to update skins'
     params: '<name>'
+  candestroy:
+    description:
+      - "Allow a specific tool/item to break a block in ADVENTURE MODE"
+    params: '<add/clear/remove> [material]'
   color:
     wrong-type: '&4[&cItemEdit&4] &cItem must be colorable type like leather armors, firework stars, potions or tipped arrows'
     description:

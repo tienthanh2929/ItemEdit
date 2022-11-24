@@ -356,4 +356,13 @@ public class Util {
         return isVersionAfter(mainGameVersionMin, gameVersionMin, gameSubVersionMin)
                 && isVersionUpTo(mainGameVersionMax, gameVersionMax, gameSubVersionMax);
     }
+
+    public static boolean isPaperServer() {
+        try {
+            Class.forName("com.destroystokyo.paper.VersionHistoryManager$VersionData");
+            return true;
+        } catch(NoClassDefFoundError | ClassNotFoundException ex) {
+            return false;
+        }
+    }
 }

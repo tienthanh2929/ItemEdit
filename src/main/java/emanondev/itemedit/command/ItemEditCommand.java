@@ -50,6 +50,8 @@ public class ItemEditCommand extends AbstractCommand {
             }
             this.registerSubCommand(new Attribute(this));// 1.13+
             this.registerSubCommand(new TropicalFish(this));// 1.13+
+            if(Util.isPaperServer()) // 1.13+
+                this.registerSubCommand(new CanDestroy(this));
             if (Util.isVersionUpTo(1,13))
                 return;
             this.registerSubCommand(new CustomModelData(this));// 1.14+
